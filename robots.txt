@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://git-ghosh.github.io/portfolio/sitemap.xml
