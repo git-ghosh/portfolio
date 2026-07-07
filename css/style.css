@@ -766,3 +766,132 @@ Certificates
     margin-bottom:20px;
 
 }
+/*=========================
+Loading Screen
+=========================*/
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#0D1117;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:999999;
+
+    transition:opacity .8s ease, visibility .8s ease;
+
+}
+
+#loader.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.loader-content{
+
+    text-align:center;
+
+}
+
+.loader-logo{
+
+    width:90px;
+
+    margin-bottom:20px;
+
+    animation:logoFloat 2s ease-in-out infinite;
+
+}
+
+.loader-content h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.loader-content p{
+
+    color:#aaa;
+
+    margin-bottom:25px;
+
+}
+
+.loading-bar{
+
+    width:240px;
+
+    height:6px;
+
+    background:#1f2937;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+.loading-bar span{
+
+    display:block;
+
+    width:0;
+
+    height:100%;
+
+    background:#3B82F6;
+
+    animation:loading 2s ease forwards;
+
+}
+
+@keyframes loading{
+
+    from{
+
+        width:0;
+
+    }
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}

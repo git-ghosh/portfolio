@@ -81,3 +81,18 @@ new Typed("#typing",{
     loop:true
 
 });
+// =========================
+// Loading Screen
+// =========================
+
+window.addEventListener("load", () => {
+
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+
+        loader.classList.add("hide");
+
+    }, 1800);
+
+});
