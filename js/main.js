@@ -1,3 +1,4 @@
+console.log("NEW main.js loaded");
 console.log("Portfolio Started 🚀");
 // Scroll Progress Bar
 
@@ -21,31 +22,28 @@ window.addEventListener("scroll", () => {
 
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll", () => {
+if (topBtn) {
 
-    if (window.scrollY > 300) {
+    window.addEventListener("scroll", () => {
 
-        topBtn.style.display = "block";
-
-    } else {
-
-        topBtn.style.display = "none";
-
-    }
-
-});
-
-topBtn.onclick = () => {
-
-    window.scrollTo({
-
-        top:0,
-
-        behavior:"smooth"
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
 
     });
 
-};
+    topBtn.onclick = () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    };
+
+}
 
 // Dark Mode
 
